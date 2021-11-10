@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<img  class="rounded mx-auto d-block"  src="static\diab.jpg" width="550" height="450"  alt="">
+
+
+  {% if pred %}
+   <h1 class='text-center'>Prediction : {{ pred }}</h1>
+   {% endif %}
+
+
+
+<form align="center" action="" method="post" >
+  <div class="form-group" align="center">
+   <label   class="font-weight-bold mt-4 mb-2 col-md-6 col-form-label col-form-label-md text-left "> Number of times pregnant</label>
+   <input  class="form-control col-md-6 border border-dark" name="x1" autocomplete="off" required>
+  </div>
+
+  <div class="form-group" align="center" >
+   <label   class="font-weight-bold mt-4 mb-2 col-md-6 col-form-label col-form-label-md text-left" >Plasma glucose concentration a 2 hours in an oral glucose tolerance test</label>
+   <input  class="form-control col-md-6 border border-dark" name="x2"  autocomplete="off" required>
+  </div>
+
+  <div class="form-group" align="center" >
+   <label class="font-weight-bold mt-4 mb-2 col-md-6 col-form-label col-form-label-md text-left" >Diastolic blood pressure (mm Hg)</label>
+   <input  class="form-control col-md-6 border border-dark" name="x3"  autocomplete="off" required>
+  </div>
+
+  <div class="form-group" align="center" >
+   <label  class="font-weight-bold mt-4 mb-2 col-md-6 col-form-label col-form-label-md text-left" >Triceps skin fold thickness (mm)</label>
+   <input  class="form-control col-md-6 border border-dark" name="x4"  autocomplete="off" required>
+  </div>
+
+  <div class="form-group"  align="center" >
+   <label  class="font-weight-bold mt-4 mb-2 col-md-6 col-form-label col-form-label-md text-left" >2-Hour serum insulin (mu U/ml)</label>
+   <input  class="form-control col-md-6 border border-dark" name="x5" autocomplete="off" required>
+  </div>
+
+  <div class="form-group"  align="center" >
+   <label  class="font-weight-bold mt-4 mb-2 col-md-6 col-form-label col-form-label-md text-left" >Body mass index (weight in kg/(height in m)^2)</label>
+   <input  class="form-control col-md-6 border border-dark" name="x6"  autocomplete="off" required>
+  </div>
+
+  <div class="form-group" align="center"  >
+   <label  class="font-weight-bold mt-4 mb-2 col-md-6 col-form-label col-form-label-md text-left" >Diabetes pedigree function</label>
+   <input  class="form-control col-md-6 border border-dark" name="x7"  autocomplete="off" required>
+  </div>
+
+  <div class="form-group" align="center" >
+   <label  class="font-weight-bold mt-4 mb-2 col-md-6 col-form-label col-form-label-md text-left" >Age (years)</label>
+   <input  class="form-control col-md-6 border border-dark" name="x8"  autocomplete="off" required>
+  </div>
+
+  <br/>
+  <button type="submit" class="btn btn-info" name="button">Predict</button>
+
+<br/>
+
+
+
+
+</form>
+
+
+
+{% endblock %}
