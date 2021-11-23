@@ -6,8 +6,8 @@ app = Flask(__name__)
 with open('diabetes_std.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
-with open('diabetes_rfc.pkl', 'rb') as file:
-     rfc = pickle.load(file)
+with open('diabetes_knn.pkl', 'rb') as file:
+     knn = pickle.load(file)
 
 @app.route('/', methods =["GET", "POST"])
 def home():
@@ -30,7 +30,7 @@ def pred():
         print(x1,x2,x3,x4,x5,x6,x7,x8)
         l = [float(x1),float(x2),float(x3),float(x4),float(x5),float(x6),float(x7),float(x8)]
         l = scaler.transform([l])
-        out = rfc.predict(l)
+        out = knn.predict(l)
         print(out)
         if out[0] == 0:
             pred = "Normal"
